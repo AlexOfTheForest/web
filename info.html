@@ -5,183 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Info - Avanti Restaurant Leer</title>
   <meta name="description" content="Informationen über das Avanti Restaurant in Leer und den Website-Entwickler Alexej Sz.">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #fff;
-      background-color: #000000;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: white;
-      margin-bottom: 1.5rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      color: white;
-    }
-    h3 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: white;
-    }
-    p {
-      margin-bottom: 1rem;
-    }
-    a {
-      color: #22c55e;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .back-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      background-color: #333;
-      color: white;
-      border-radius: 0.375rem;
-      text-decoration: none;
-      margin-bottom: 2rem;
-    }
-    .back-button:hover {
-      background-color: #444;
-      text-decoration: none;
-    }
-    .section {
-      margin-bottom: 2rem;
-      background-color: #333;
-      padding: 1.5rem;
-      border-radius: 0.5rem;
-      border-left: 4px solid #ef4444;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .footer p {
-      color: white;
-      font-size: 0.875rem;
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background-color: #333;
-      border-radius: 9999px;
-    }
-    .color-bar {
-      display: inline-flex;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-    .color-bar div {
-      width: 2rem;
-      height: 0.25rem;
-    }
-    .profile-container {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.5rem;
-    }
-    .profile-image {
-      width: 120px;
-      height: 120px;
-      border-radius: 9999px;
-      background-color: #222;
-      overflow: hidden;
-      flex-shrink: 0;
-      border: 3px solid #ef4444;
-    }
-    .profile-image img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-    .profile-info {
-      flex: 1;
-    }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.75rem;
-    }
-    .contact-icon {
-      margin-right: 0.75rem;
-      width: 18px;
-      height: 18px;
-    }
-    .divider {
-      border-top: 1px solid #444;
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-    }
-  </style>
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="images/apple-icon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="container">
-    <a href="index.html" class="back-button">
-      ← Zurück zur Startseite
-    </a>
+<body class="flex min-h-screen flex-col bg-black text-white info-page">
 
-    <div>
-      <div class="color-bar">
-        <div style="background-color: #22c55e;"></div>
-        <div style="background-color: white;"></div>
-        <div style="background-color: #ef4444;"></div>
-      </div>
-      <h1>Info</h1>
-    </div>
+  <!-- Header placeholder - Add if needed to match main site layout -->
+  <header class="sticky-header"></header>
 
-    <div class="section">
-      <h2>Website-Entwickler</h2>
+  <main class="flex-1 py-12">
+    <div class="container">
+      <!-- Back button -->
+      <a href="index.html" class="btn btn-outline inline-flex items-center mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left w-4 h-4 mr-2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Zurück zur Startseite
+      </a>
 
-      <div class="profile-container">
-        <div class="profile-image">
-          <img src="images/alexej-profile.jpeg" alt="Alexej Sz. - Web-Entwickler aus Leer">
+      <!-- Title -->
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center mb-4">
+          <div class="w-8 h-1 bg-green-600"></div>
+          <div class="w-8 h-1 bg-white"></div>
+          <div class="w-8 h-1 bg-red-600"></div>
         </div>
-
-        <div class="profile-info">
-          <h3>Alexej Sz.</h3>
-
-          <div class="contact-item">
-            <svg class="contact-icon" style="color: #ef4444;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Aus Leer</span>
+        <h1 class="section-title text-3xl">Info</h1>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="special-card green-border">
+          <div class="special-header">
+            <h2 class="special-title text-xl">Website-Entwickler</h2>
           </div>
 
-          <div class="contact-item">
-            <svg class="contact-icon" style="color: #22c55e;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <span>+49 1520 6280878</span>
+          <div class="profile-container flex items-start gap-6">
+            <div class="profile-image w-20 h-20 rounded-full bg-zinc-800 overflow-hidden flex-shrink-0 border-2 border-red-600">
+              <img src="images/alexej-profile.jpeg" alt="Alexej Sz. - Web-Entwickler aus Leer" class="object-cover w-full h-full">
+            </div>
+
+            <div class="profile-info flex-1">
+              <h3 class="text-lg font-semibold mb-2">Alexej Sz.</h3>
+
+              <div class="contact-item flex items-center mb-2 text-zinc-300">
+                <svg class="contact-icon w-4 h-4 mr-2 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Aus Leer</span>
+              </div>
+
+              <div class="contact-item flex items-center mb-2 text-zinc-300">
+                <svg class="contact-icon w-4 h-4 mr-2 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>+49 1520 6280878</span>
+              </div>
+
+              <div class="contact-item flex items-center text-zinc-300">
+                <svg class="contact-icon w-4 h-4 mr-2 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>Webentwicklung</span>
+              </div>
+            </div>
           </div>
 
-          <div class="contact-item">
-            <svg class="contact-icon" style="color: #a855f7;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-            <span>Entwickler</span>
-          </div>
+          <p class="special-description mt-6 pt-6 border-t border-zinc-700">
+            Diese Website wurde mit HTML, CSS und JavaScript erstellt, um Geschwindigkeit und
+            Benutzerfreundlichkeit in den Vordergrund zu stellen. Das Design wurde speziell für Avanti Restaurant
+            entwickelt, um die Atmosphäre und Qualität des Restaurants widerzuspiegeln.
+          </p>
         </div>
       </div>
+      
+      <!-- Footer placeholder - Add if needed to match main site layout -->
+      <div class="footer mt-8 text-center text-zinc-400 text-sm">
+        <p>© <span id="currentYear"></span> Avanti Restaurant. Alle Rechte vorbehalten.</p>
+      </div>
 
-      <p class="divider">
-        Diese Website wurde mit HTML, CSS und JavaScript erstellt, um Geschwindigkeit und
-        Benutzerfreundlichkeit in den Vordergrund zu stellen. Das Design wurde speziell für Avanti Restaurant
-        entwickelt, um die Atmosphäre und Qualität des Restaurants widerzuspiegeln.
-      </p>
     </div>
+  </main>
 
-    <div class="footer">
-      <p>© <span id="currentYear">2025</span> - Alle Rechte vorbehalten</p>
-    </div>
-  </div>
+  <!-- Footer placeholder - Add if needed to match main site layout -->
+  <footer class="site-footer"></footer>
 
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
