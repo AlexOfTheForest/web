@@ -38,18 +38,21 @@
       </div>
       
       <div class="space-y-8">
-        <!-- special-card now flush left within its container -->
+        <!-- Card flush-left -->
         <div class="special-card green-border p-8 bg-gray-800 rounded-lg mx-0">
           <div class="special-header mb-6">
             <h2 class="special-title text-xl font-semibold">Website-Entwickler</h2>
           </div>
 
-          <!-- Profile container left-aligned -->
+          <!-- Content left-aligned -->
           <div class="profile-container flex flex-col md:flex-row items-start justify-start gap-8">
             <div class="profile-image w-32 h-32 rounded-full bg-zinc-800 overflow-hidden flex-shrink-0 border-2 border-red-600">
-              <img src="images/alexej-profile.jpeg"
-                   alt="Alexej Sz. – Web-Entwickler aus Leer"
-                   class="object-cover w-full h-full">
+              <!-- object-contain + object-center to avoid cropping -->
+              <img
+                src="images/alexej-profile.jpeg"
+                alt="Alexej Sz. – Web-Entwickler aus Leer"
+                class="object-contain object-center w-full h-full"
+              >
             </div>
 
             <div class="profile-info flex-1">
@@ -101,7 +104,7 @@
         </div>
       </div>
       
-      <!-- Footer placeholder -->
+      <!-- Footer -->
       <div class="footer mt-12 text-center text-zinc-400 text-sm">
         <p>© <span id="currentYear"></span> Avanti Restaurant. Alle Rechte vorbehalten.</p>
       </div>
