@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzeria Avanti Leer - Pizza, Döner & türkische Spezialitäten</title>
+  <meta name="description" content="Genießen Sie authentische türkische und italienische Küche im Avanti Restaurant in Leer. Pizza, Döner, Pasta und mehr - auch mit Lieferservice.">
+  <meta name="keywords" content="Avanti Restaurant, Pizza Leer, Döner Leer, Lieferservice, türkische Küche, italienische Küche">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="images/apple-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="flex min-h-screen flex-col bg-black text-white">
+    <!-- Header -->
+    <header class="sticky-header">
+      <div class="container header-container">
+        <div class="flex items-center gap-3">
+          <div class="logo-container">
+            <div class="relative w-32 h-16">
+              <img src="images/avanti-logo-oval.png" alt="Avanti Logo" class="logo-image">
+            </div>
+            <div class="text-xs text-gray-400 mt-1">Inh. A. Kalmaz</div>
+          </div>
+        </div>
+        <nav class="desktop-nav">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#specials" class="nav-link">Angebote</a>
+          <a href="#menu" class="nav-link">Speisekarte</a>
+          <a href="#contact" class="nav-link">Kontakt</a>
+        </nav>
+        <div class="desktop-contact">
+          <a href="tel:049197682000" class="phone-link">0491 - 97 68 20 00</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <section id="home" class="relative">
+        <div class="hero-container">
+          <div class="overlay"></div>
+          <div class="gradient-overlay"></div>
+          <img src="images/avanti-storefront.png" alt="Pizzeria Avanti Außenansicht bei Nacht" class="hero-image">
+          <div class="hero-content">
+            <div class="container text-center text-white">
+              <div class="inline-flex items-center mb-6">
+                <div class="w-12 h-1 bg-green-600"></div>
+                <div class="w-12 h-1 bg-white"></div>
+                <div class="w-12 h-1 bg-red-600"></div>
+              </div>
+              <h1 class="hero-title">
+                <div class="flex items-center justify-center gap-4 mb-4">
+                  <span class="text-white">Pizzeria</span>
+                  <div class="relative w-40 h-20 md-w-56 md-h-28 flex items-end logo-text-container">
+                    <img src="images/avanti-text-logo.png" alt="Avanti Logo" class="logo-text-image">
+                  </div>
+                </div>
+              </h1>
+              <p class="hero-subtitle">Pizza • Döner • Pasta • Türkische Spezialitäten</p>
+              <div class="hero-buttons">
+                <a href="tel:049197682000" class="btn btn-primary">
+                  Jetzt bestellen <span class="chevron-right"></span>
+                </a>
+                <a href="#menu" class="btn btn-outline">
+                  Speisekarte
+                </a>
+              </div>
+              <div class="delivery-notice">
+                Lieferung ab 20 € frei Haus • Umgebung auf Anfrage!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Google Reviews Section -->
+      <section class="reviews-section">
+        <div class="container">
+          <div class="text-center mb-8">
+            <h2 class="section-title">Was unsere Kunden sagen</h2>
+            <div class="flex items-center justify-center mb-2">
+              <div class="flex">
+                <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" /></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" /></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" /></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" /></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" /></svg>
+              </div>
+              <span class="ml-2 text-lg font-bold">4.8/5</span>
+            </div>
+            <p class="reviews-count">Basierend auf 279 Google-Bewertungen</p>
+            <a href="https://g.co/kgs/PwwuPLD" target="_blank" rel="noopener noreferrer" class="reviews-link">
+              Alle Bewertungen ansehen
+              <span class="chevron-right-small"></span>
+            </a>
+          </div>
+          <div class="review-carousel-container">
+            <div class="review-carousel" id="reviewCarousel">
+              <!-- Reviews will be inserted by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Special Offers Section -->
+      <section id="specials" class="specials-section">
+        <div class="container">
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center mb-4">
+              <div class="w-8 h-1 bg-green-600"></div>
+              <div class="w-8 h-1 bg-white"></div>
+              <div class="w-8 h-1 bg-red-600"></div>
+            </div>
+            <h2 class="section-title">Unsere Wochenangebote</h2>
+            <p class="section-description">
+              Besuchen Sie uns an unseren Spezial-Tagen und profitieren Sie von besonderen Angeboten
+            </p>
+          </div>
+          <div class="specials-grid">
+            <div class="special-card green-border">
+              <div class="special-bubble green"></div>
+              <div class="special-header">
+                <div class="special-icon green">
+                  <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+                <h3 class="special-title">Dienstag: "Nudeltag"</h3>
+              </div>
+              <p class="special-price">Alle Nudelgerichte 1 € günstiger!</p>
+              <p class="special-description">
+                Genießen Sie unsere leckeren Pasta-Kreationen zu einem besonders günstigen Preis.
+              </p>
+            </div>
+            <div class="special-card red-border">
+              <div class="special-bubble red"></div>
+              <div class="special-header">
+                <div class="special-icon red">
+                  <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+                <h3 class="special-title">Mittwoch: "Pizzatag"</h3>
+              </div>
+              <p class="special-price">Jede Pizza (28 cm) 1 € günstiger!</p>
+              <p class="special-description">
+                Probieren Sie unsere köstlichen Pizzen mit frischen Zutaten zu einem Sonderpreis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu Categories Section -->
+      <section id="menu" class="menu-section">
+        <div class="container">
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center mb-4">
+              <div class="w-8 h-1 bg-green-600"></div>
+              <div class="w-8 h-1 bg-white"></div>
+              <div class="w-8 h-1 bg-red-600"></div>
+            </div>
+            <h2 class="section-title">Unsere Speisekarte</h2>
+            <p class="section-description">
+              Entdecken Sie unsere vielfältige Auswahl an Gerichten - von Pizza und Döner bis hin zu türkischen
+              Spezialitäten
+            </p>
+          </div>
+          <div class="menu-categories" id="menuCategories">
+            <!-- Menu categories will be inserted by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Dishes Section -->
+      <section class="popular-dishes-section">
+        <div class="container">
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center mb-4">
+              <div class="w-8 h-1 bg-green-600"></div>
+              <div class="w-8 h-1 bg-white"></div>
+              <div class="w-8 h-1 bg-red-600"></div>
+            </div>
+            <h2 class="section-title">Beliebteste Gerichte</h2>
+            <p class="section-description">Unsere Kunden lieben diese Gerichte besonders</p>
+          </div>
+          <div class="popular-dishes-grid">
+            <div class="dish-card border-green">
+              <div class="dish-image-container">
+                <img src="images/tellergerichte.png" alt="24. Kebab Teller" class="dish-image">
+                <div class="dish-overlay">
+                  <span class="dish-name">24. Kebab Teller</span>
+                </div>
+              </div>
+              <div class="dish-content">
+                <div class="dish-header">
+                  <h3 class="dish-title">24. Kebab Teller</h3>
+                  <span class="dish-price">10,00 €</span>
+                </div>
+                <p class="dish-description">Mit Hackfleisch vom Drehspieß, Pommes Frites, gemischter Salat und Tzatziki</p>
+              </div>
+            </div>
+            <div class="dish-card border-white">
+              <div class="dish-image-container">
+                <img src="images/pizza.png" alt="31. Pizza Salami" class="dish-image">
+                <div class="dish-overlay">
+                  <span class="dish-name">31. Pizza Salami</span>
+                </div>
+              </div>
+              <div class="dish-content">
+                <div class="dish-header">
+                  <h3 class="dish-title">31. Pizza Salami</h3>
+                  <span class="dish-price">6,00 € / 8,00 € / 17,50 €</span>
+                </div>
+                <p class="dish-description">Mit Tomatensauce, Käse, Salami und Oregano</p>
+              </div>
+            </div>
+            <div class="dish-card border-red">
+              <div class="dish-image-container">
+                <img src="images/rollo.png" alt="85. Kebab Rollo" class="dish-image">
+                <div class="dish-overlay">
+                  <span class="dish-name">85. Kebab Rollo</span>
+                </div>
+              </div>
+              <div class="dish-content">
+                <div class="dish-header">
+                  <h3 class="dish-title">85. Kebab Rollo</h3>
+                  <span class="dish-price">9,50 €</span>
+                </div>
+                <p class="dish-description">Mit Hackfleisch vom Drehspieß, Käse, Eisbergsalat, Gurken, Tomaten, Zwiebeln und Tomatensauce</p>
+              </div>
+            </div>
+            <div class="dish-card border-green">
+              <div class="dish-image-container">
+                <img src="images/aufläufe.png" alt="105. Kebab überbacken" class="dish-image">
+                <div class="dish-overlay">
+                  <span class="dish-name">105. Kebab überbacken</span>
+                </div>
+              </div>
+              <div class="dish-content">
+                <div class="dish-header">
+                  <h3 class="dish-title">105. Kebab überbacken</h3>
+                  <span class="dish-price">9,00 €</span>
+                </div>
+                <p class="dish-description">Mit Hackfleisch vom Drehspieß, Champignons, Sauce Hollandaise und 1 Fladenbrot</p>
+              </div>
+            </div>
+            <div class="dish-card border-white">
+              <div class="dish-image-container">
+                <img src="images/pizzaspecial.png" alt="43. Manhattan" class="dish-image">
+                <div class="dish-overlay">
+                  <span class="dish-name">43. Manhattan</span>
+                </div>
+              </div>
+              <div class="dish-content">
+                <div class="dish-header">
+                  <h3 class="dish-title">43. Manhattan</h3>
+                  <span class="dish-price">7,00 € / 9,50 € / 22,00 €</span>
+                </div>
+                <p class="dish-description">mit Tomatensauce, Käse, Hackfleisch vom Drehspieß, Sauce Hollandaise, Chesterkäse und Oregano</p>
+              </div>
+            </div>
+            <div class="dish-card border-red">
+              <div class="dish-image-container">
+                <img src="images/nudelgerichte.png" alt="140. Rigatoni Napoli" class="dish-image">
+                <div class="dish-overlay">
+                  <span class="dish-name">140. Rigatoni Napoli</span>
+                </div>
+              </div>
+              <div class="dish-content">
+                <div class="dish-header">
+                  <h3 class="dish-title">140. Rigatoni Napoli</h3>
+                  <span class="dish-price">9,00 €</span>
+                </div>
+                <p class="dish-description">Mit Tomatensauce</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center mb-4">
+              <div class="w-8 h-1 bg-green-600"></div>
+              <div class="w-8 h-1 bg-white"></div>
+              <div class="w-8 h-1 bg-red-600"></div>
+            </div>
+            <h2 class="section-title">Kontakt & Öffnungszeiten</h2>
+            <p class="section-description">Besuchen Sie uns oder bestellen Sie bequem nach Hause</p>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon-container green">
+                  <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <h3 class="contact-title">Adresse</h3>
+                  <p class="contact-text">
+                    Bremer Straße 41
+                    <br>
+                    26789 Leer
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon-container white">
+                  <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <h3 class="contact-title">Telefon</h3>
+                  <p class="contact-text">0491 - 97 68 20 00</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon-container red">
+                  <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div>
+                  <h3 class="contact-title">Öffnungszeiten</h3>
+                  <div class="opening-hours">
+                    <div>Montag:</div>
+                    <div>Geschlossen</div>
+                    <div>Di. - Do.:</div>
+                    <div>11:30 - 22:00 Uhr</div>
+                    <div>Freitag:</div>
+                    <div>11:00 - 22:30 Uhr</div>
+                    <div>Samstag:</div>
+                    <div>12:00 - 22:30 Uhr</div>
+                    <div>Sonntag:</div>
+                    <div>12:00 - 22:00 Uhr</div>
+                  </div>
+                  <p class="holiday-notice">Auch an Feiertagen geöffnet!</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon-container green">
+                  <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <h3 class="contact-title">Lieferzeiten</h3>
+                  <p class="contact-text">Letzte Lieferannahme jeweils 30 Minuten vor Ladenschluss</p>
+                </div>
+              </div>
+            </div>
+            <div class="map-container">
+              <a href="https://maps.google.com/maps?q=Avanti+Leer+Bremer+Straße+41" target="_blank" rel="noopener noreferrer" class="map-link">
+                <img src="images/map-location.png" alt="Standort von Avanti Restaurant in Leer" class="map-image">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="images/avanti-logo-oval.png" alt="Avanti Logo" class="footer-logo-image">
+          </div>
+          <div class="footer-info">
+            <div class="social-links">
+              <a href="https://www.instagram.com/pizzeria_avanti_leer/" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="Folge uns auf Instagram">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="https://www.facebook.com/share/15Vg3qvr5b/?mibextid=wwXlfr" target="_blank" rel="noopener noreferrer" class="social-link facebook" aria-label="Folge uns auf Facebook">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+            </div>
+            <div class="footer-text">
+              <p>© <span id="currentYear"></span> Avanti Restaurant. Alle Rechte vorbehalten.</p>
+              <p>Bremer Straße 41, 26789 Leer</p>
+              <div class="footer-links">
+                <a href="impressum.html" class="footer-link">Impressum</a>
+                <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+                <a href="info.html" class="footer-link">Info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Avanti Restaurant",
+      "image": "https://avanti-restaurant-leer.de/logo.png",
+      "url": "https://avanti-restaurant-leer.de",
+      "telephone": "049197682000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bremer Straße 41",
+        "addressLocality": "Leer",
+        "postalCode": "26789",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.2394,
+        "longitude": 7.4546
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+          "opens": "11:30",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "11:00",
+          "closes": "22:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "12:00",
+          "closes": "22:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "12:00",
+          "closes": "22:00"
+        }
+      ],
+      "servesCuisine": ["Turkish", "Italian"],
+      "priceRange": "€€",
+      "menu": "https://avanti-restaurant-leer.de/#menu"
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
