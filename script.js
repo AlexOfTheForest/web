@@ -199,11 +199,6 @@ function initReviewCarousel() {
     `;
     
     carouselContainer.appendChild(slide);
-
-    // Clear animation style after it finishes
-    slide.addEventListener('animationend', () => {
-      slide.style.animation = '';
-    });
   });
   
   // Create dots
@@ -234,8 +229,11 @@ function initReviewCarousel() {
     // Animate out current slide
     currentSlide.classList.remove('active');
 
-    // Animate in next slide
-    nextSlide.classList.add('active');
+    // Wait for the next frame to allow CSS transition to start
+    requestAnimationFrame(() => {
+      // Animate in next slide
+      nextSlide.classList.add('active');
+    });
 
     // Update active dot
     dots[currentIndex].classList.remove('active');
