@@ -15,7 +15,7 @@
   <header class="sticky-header"></header>
 
   <main class="flex-1 py-12">
-    <div class="container">
+    <div class="container mx-auto px-4">
       <!-- Back button -->
       <a href="index.html" class="btn btn-outline inline-flex items-center mb-8">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -38,24 +38,26 @@
       </div>
       
       <div class="space-y-8">
-        <div class="special-card green-border">
-          <div class="special-header">
-            <h2 class="special-title text-xl">Website-Entwickler</h2>
+        <div class="special-card green-border p-8 bg-gray-800 rounded-lg">
+          <div class="special-header mb-6">
+            <h2 class="special-title text-xl font-semibold">Website-Entwickler</h2>
           </div>
 
-          <div class="profile-container flex items-start gap-6">
-            <!-- Anzeigegröße reduziert von w-5 h-5 auf w-4 h-4 -->
-            <div class="profile-image w-4 h-4 rounded-full bg-zinc-800 overflow-hidden flex-shrink-0 border-2 border-red-600">
-              <img src="images/alexej-profile.jpeg"
-                   alt="Alexej Sz. – Web-Entwickler aus Leer"
-                   class="object-cover w-full h-full">
+          <div class="profile-container flex flex-col md:flex-row items-center md:items-start gap-8">
+            <!-- Profilbild auf eine überschaubare Größe geändert -->
+            <div class="profile-image w-32 h-32 rounded-full bg-zinc-800 overflow-hidden flex-shrink-0 border-2 border-red-600">
+              <img
+                src="images/alexej-profile.jpeg"
+                alt="Alexej Sz. – Web-Entwickler aus Leer"
+                class="object-cover w-full h-full"
+              >
             </div>
 
             <div class="profile-info flex-1">
-              <h3 class="text-lg font-semibold mb-2">Alexej Sz.</h3>
+              <h3 class="text-lg font-semibold mb-3">Alexej Sz.</h3>
 
               <div class="contact-item flex items-center mb-2 text-zinc-300">
-                <svg class="contact-icon w-4 h-4 mr-2 text-red-500" viewBox="0 0 24 24" fill="none"
+                <svg class="contact-icon w-5 h-5 mr-2 text-red-500" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
@@ -64,7 +66,7 @@
               </div>
 
               <div class="contact-item flex items-center mb-2 text-zinc-300">
-                <svg class="contact-icon w-4 h-4 mr-2 text-green-500" viewBox="0 0 24 24" fill="none"
+                <svg class="contact-icon w-5 h-5 mr-2 text-green-500" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2
                            19.79 19.79 0 0 1-8.63-3.07
@@ -82,7 +84,7 @@
               </div>
 
               <div class="contact-item flex items-center text-zinc-300">
-                <svg class="contact-icon w-4 h-4 mr-2 text-yellow-400" viewBox="0 0 24 24" fill="none"
+                <svg class="contact-icon w-5 h-5 mr-2 text-yellow-400" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="16 18 22 12 16 6"></polyline>
                   <polyline points="8 6 2 12 8 18"></polyline>
@@ -92,7 +94,7 @@
             </div>
           </div>
 
-          <p class="special-description mt-6 pt-6 border-t border-zinc-700">
+          <p class="special-description mt-8 pt-6 border-t border-zinc-700 text-zinc-300">
             Diese Website wurde mit HTML, CSS und JavaScript erstellt, um Geschwindigkeit und
             Benutzerfreundlichkeit in den Vordergrund zu stellen. Das Design wurde speziell für Avanti Restaurant
             entwickelt, um die Atmosphäre und Qualität des Restaurants widerzuspiegeln.
@@ -101,7 +103,7 @@
       </div>
       
       <!-- Footer placeholder -->
-      <div class="footer mt-8 text-center text-zinc-400 text-sm">
+      <div class="footer mt-12 text-center text-zinc-400 text-sm">
         <p>© <span id="currentYear"></span> Avanti Restaurant. Alle Rechte vorbehalten.</p>
       </div>
     </div>
